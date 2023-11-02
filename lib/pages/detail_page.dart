@@ -54,6 +54,7 @@ class _detailPageState extends State<DetailPage> {
                             left: 25, right: 25, bottom: 25, top: 35
                         ),
                         child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -104,7 +105,6 @@ class _detailPageState extends State<DetailPage> {
                                 )
                               ],
                             ),
-                            const SizedBox(height: 20,),
                             SizedBox(
                               width: 340,
                               child: Image.asset(
@@ -112,48 +112,50 @@ class _detailPageState extends State<DetailPage> {
                                 fit: BoxFit.fill,
                               ),
                             ),
-                            const SizedBox(height: 20,),
-                            Align(
-                              alignment: Alignment.centerLeft,
-                              child: Text(
-                                widget.name,
-                                style: GoogleFonts.sora(
-                                    fontSize: 32,
-                                    fontWeight: FontWeight.w600
-                                ),
-                              ),
-                            ),
-                            const SizedBox(height: 10,),
-                            const Row(
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
-                                Icon(
-                                  Icons.star,
-                                  size: 15,
-                                  color: Colors.yellow,
+                                Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text(
+                                    widget.name,
+                                    style: GoogleFonts.sora(
+                                        fontSize: 32,
+                                        fontWeight: FontWeight.w600
+                                    ),
+                                  ),
                                 ),
-                                Icon(
-                                  Icons.star,
-                                  size: 15,
-                                  color: Colors.yellow,
-                                ),
-                                Icon(
-                                  Icons.star,
-                                  size: 15,
-                                  color: Colors.yellow,
-                                ),
-                                Icon(
-                                  Icons.star,
-                                  size: 15,
-                                  color: Colors.yellow,
-                                ),
-                                Icon(
-                                  Icons.star_border,
-                                  size: 15,
-                                  color: Colors.yellow,
+                                const Row(
+                                  children: [
+                                    Icon(
+                                      Icons.star,
+                                      size: 15,
+                                      color: Colors.yellow,
+                                    ),
+                                    Icon(
+                                      Icons.star,
+                                      size: 15,
+                                      color: Colors.yellow,
+                                    ),
+                                    Icon(
+                                      Icons.star,
+                                      size: 15,
+                                      color: Colors.yellow,
+                                    ),
+                                    Icon(
+                                      Icons.star,
+                                      size: 15,
+                                      color: Colors.yellow,
+                                    ),
+                                    Icon(
+                                      Icons.star_border,
+                                      size: 15,
+                                      color: Colors.yellow,
+                                    ),
+                                  ],
                                 ),
                               ],
                             ),
-                            const SizedBox(height: 10,),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
@@ -265,7 +267,6 @@ class _detailPageState extends State<DetailPage> {
                                 ),
                               ],
                             ),
-                            const SizedBox(height: 20,),
                             Text(
                               "Fried rice with egg and vegetables, flavorful and delicious. The vegetables in this dish will stay firm and fresh, which gives this dish a special flavor.",
                               style: GoogleFonts.sora(
@@ -274,28 +275,37 @@ class _detailPageState extends State<DetailPage> {
                                   fontWeight: FontWeight.w400
                               ),
                             ),
-                            const SizedBox(height: 130,),
-                            InkWell(
-                              onTap: () {},
-                              child: Container(
-                                  height: 70,
-                                  width: width - 200,
-                                  decoration: BoxDecoration(
-                                    color: const Color.fromRGBO(216, 79, 59, 1),
-                                    borderRadius: BorderRadius.circular(20),
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                InkWell(
+                                  onTap: () {},
+                                  child: Container(
+                                      height: 70,
+                                      width: width - 200,
+                                      decoration: BoxDecoration(
+                                        color: const Color.fromRGBO(
+                                            216,
+                                            79,
+                                            59,
+                                            1
+                                        ),
+                                        borderRadius: BorderRadius.circular(20),
+                                      ),
+                                      child: Center(
+                                        child: TextButton(
+                                          child: Text("Add to cart",
+                                            style: GoogleFonts.sora(
+                                                fontSize: 20,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.w400
+                                            ),),
+                                          onPressed: () {},
+                                        ),
+                                      )
                                   ),
-                                  child: Center(
-                                    child: TextButton(
-                                      child: Text("Add to cart",
-                                        style: GoogleFonts.sora(
-                                            fontSize: 20,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.w400
-                                        ),),
-                                      onPressed: () {},
-                                    ),
-                                  )
-                              ),
+                                )
+                              ],
                             )
                           ],
                         ),
