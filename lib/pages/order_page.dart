@@ -7,7 +7,7 @@ class OrderDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var width = MediaQuery.of(context).size.width;
+    var size = MediaQuery.of(context).size;
 
     return Padding(
         padding: const EdgeInsets.all(20),
@@ -43,42 +43,57 @@ class OrderDetails extends StatelessWidget {
                         Image.asset("assets/bigegg1.png", height: 100,
                           fit: BoxFit.fill,),
                         const SizedBox(width: 15,),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "Fried Rice",
-                              style: GoogleFonts.sora(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w700
-                              ),
-                            ),
-                            const SizedBox(height: 3,),
-                            Text(
-                              """Fried rice with egg
-and vegetables.""",
-                              style: GoogleFonts.sora(
-                                fontSize: 14,
-                                color: const Color(0xff858992),
-                              ),
-                            ),
-                            const SizedBox(height: 18,),
-                            Row(
-                              children: [
-                                Text(
-                                  "\$3.45",
-                                  style: GoogleFonts.sora(
-                                    fontSize: 18,
-                                    color: const Color.fromRGBO(216, 79, 59, 1),
+                        SizedBox(
+                          height: size.height / 8.5,
+                          width: size.width / 1.9,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "Fried Rice",
+                                    style: GoogleFonts.sora(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w700
+                                    ),
                                   ),
-                                ),
-                                const SizedBox(width: 150,),
-                                const Icon(CupertinoIcons.delete,
-                                  color: Colors.red,)
-                              ],
-                            )
-                          ],
-                        ),
+                                  const SizedBox(height: 3,),
+                                  Text(
+                                    """Fried rice with egg
+and vegetables.""",
+                                    style: GoogleFonts.sora(
+                                      fontSize: 14,
+                                      color: const Color(0xff858992),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment
+                                    .spaceBetween,
+                                children: [
+                                  Text(
+                                    "\$3.45",
+                                    style: GoogleFonts.sora(
+                                      fontSize: 18,
+                                      color: const Color.fromRGBO(
+                                          216,
+                                          79,
+                                          59,
+                                          1
+                                      ),
+                                    ),
+                                  ),
+                                  const Icon(CupertinoIcons.delete,
+                                    color: Colors.red,)
+                                ],
+                              ),
+                            ],
+                          ),
+                        )
                       ],
                     ),
                     const SizedBox(height: 20,),
@@ -88,41 +103,56 @@ and vegetables.""",
                         Image.asset("assets/rollandfon.png", height: 100,
                           fit: BoxFit.fill,),
                         const SizedBox(width: 15,),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "Syake roll",
-                              style: GoogleFonts.sora(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w700
-                              ),
-                            ),
-                            const SizedBox(height: 3,),
-                            Text(
-                              "Classic Syake rolls.",
-                              style: GoogleFonts.sora(
-                                fontSize: 14,
-                                color: const Color(0xff858992),
-                              ),
-                            ),
-                            const SizedBox(height: 38,),
-                            Row(
-                              children: [
-                                Text(
-                                  "\$1.68",
-                                  style: GoogleFonts.sora(
-                                    fontSize: 18,
-                                    color: const Color.fromRGBO(216, 79, 59, 1),
+                        SizedBox(
+                          height: size.height / 8,
+                          width: size.width / 1.9,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "Syake roll",
+                                    style: GoogleFonts.sora(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w700
+                                    ),
                                   ),
-                                ),
-                                const SizedBox(width: 150,),
-                                const Icon(CupertinoIcons.delete,
-                                  color: Colors.red,)
-                              ],
-                            ),
-                          ],
-                        ),
+                                  const SizedBox(height: 3,),
+                                  Text(
+                                    "Classic Syake rolls.",
+                                    style: GoogleFonts.sora(
+                                      fontSize: 14,
+                                      color: const Color(0xff858992),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment
+                                    .spaceBetween,
+                                children: [
+                                  Text(
+                                    "\$1.68",
+                                    style: GoogleFonts.sora(
+                                      fontSize: 18,
+                                      color: const Color.fromRGBO(
+                                          216,
+                                          79,
+                                          59,
+                                          1
+                                      ),
+                                    ),
+                                  ),
+                                  const Icon(CupertinoIcons.delete,
+                                    color: Colors.red,)
+                                ],
+                              ),
+                            ],
+                          ),
+                        )
                       ],
                     ),
                   ],
@@ -148,7 +178,7 @@ and vegetables.""",
                 Container(
                   decoration:
                   BoxDecoration(borderRadius: BorderRadius.circular(80)),
-                  width: width,
+                  width: size.width,
                   child: const Image(
                     fit: BoxFit.cover,
                     image: AssetImage(
@@ -218,7 +248,7 @@ and vegetables.""",
                                       mainAxisAlignment: MainAxisAlignment.end,
                                       children: [
                                         Container(
-                                          width: width - 250,
+                                          width: size.width - 250,
                                           height: 50,
                                           decoration: BoxDecoration(
                                               color: const Color.fromRGBO(
@@ -261,7 +291,7 @@ and vegetables.""",
                         );
                       },
                       child: Container(
-                        width: width - 250,
+                        width: size.width - 250,
                         height: 50,
                         decoration: BoxDecoration(
                             color: const Color.fromRGBO(216, 79, 59, 1),

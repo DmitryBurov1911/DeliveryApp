@@ -12,10 +12,11 @@ class ThreeStartPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const SizedBox(height: 170,),
-            const Image(image: AssetImage("assets/startpage2.png"), height: 290,),
-            const SizedBox(height: 40,),
+            const Image(image: AssetImage("assets/startpage2.png"),
+              height: 290,),
             Padding(
               padding: const EdgeInsets.only(right: 35, left: 35),
               child: Column(
@@ -28,7 +29,6 @@ class ThreeStartPage extends StatelessWidget {
                         fontSize: 20
                     ),
                   ),
-                  const SizedBox(height: 10,),
                   Text(
                     """Fast delivery will not make you bored, we
 bring everything on time!""",
@@ -39,7 +39,6 @@ bring everything on time!""",
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  const SizedBox(height: 15,),
                   TextButton(
                       onPressed: () async {
                         final prefs = await SharedPreferences.getInstance();

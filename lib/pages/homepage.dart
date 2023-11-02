@@ -44,7 +44,10 @@ class _homePageState extends State<HomePage> {
                 label: ""
             ),
             BottomNavigationBarItem(
-                icon: Icon(Icons.shopping_cart_outlined),
+                icon: Icon(
+                  Icons.shopping_cart_outlined,
+                  color: Colors.transparent,
+                ),
                 label: ""
             ),
             BottomNavigationBarItem(
@@ -79,7 +82,7 @@ class _homePageState extends State<HomePage> {
               builder: (context) => const OrderDetails(),
             );
           },
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.transparent,
           foregroundColor: Colors.black,
           elevation: 0,
           child: const Icon(Icons.shopping_cart_outlined),

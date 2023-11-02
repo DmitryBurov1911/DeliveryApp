@@ -8,10 +8,13 @@ class Saved extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
+
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(25),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             SafeArea(
               child: Center(
@@ -24,7 +27,6 @@ class Saved extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 15,),
             Column(
               children: [
                 Row(
@@ -41,104 +43,135 @@ class Saved extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 20,),
             SizedBox(
-              child: Column(
-                children: [
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.asset("assets/bigegg1.png", height: 120,
-                        fit: BoxFit.fill,),
-                      const SizedBox(width: 15,),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Fried Rice",
-                            style: GoogleFonts.sora(
-                                fontSize: 20,
-                                fontWeight: FontWeight.w700
-                            ),
-                          ),
-                          const SizedBox(height: 3,),
-                          Text(
-                            """Fried rice with egg
-and vegetables.""",
-                            style: GoogleFonts.sora(
-                              fontSize: 16,
-                              color: const Color(0xff858992),
-                            ),
-                          ),
-                          const SizedBox(height: 30,),
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            children: [
-                              Text(
-                                "\$3.45",
-                                style: GoogleFonts.sora(
-                                  fontSize: 18,
-                                  color: const Color.fromRGBO(216, 79, 59, 1),
-                                ),
-                              ),
-                              const SizedBox(width: 120,),
-                              const Icon(CupertinoIcons.heart_fill,
-                                color: Colors.red,)
-                            ],
-                          )
-                        ],
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 25,),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.asset("assets/rollandfon.png", height: 120,
+              child: SizedBox(
+                height: size.height / 3.2,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Image.asset("assets/bigegg1.png", height: size
+                            .height / 7.5,
                           fit: BoxFit.fill,),
-                      const SizedBox(width: 15,),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Syake roll",
-                            style: GoogleFonts.sora(
-                                fontSize: 20,
-                                fontWeight: FontWeight.w700
-                            ),
-                          ),
-                          const SizedBox(height: 3,),
-                          Text(
-                            "Classic Syake rolls.",
-                            style: GoogleFonts.sora(
-                              fontSize: 16,
-                              color: const Color(0xff858992),
-                            ),
-                          ),
-                          const SizedBox(height: 50,),
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.end,
+                        const SizedBox(width: 15,),
+                        SizedBox(
+                          height: MediaQuery.of(context).size.height / 7,
+                          width: MediaQuery.of(context).size.width - 210,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
-                                "\$1.68",
-                                style: GoogleFonts.sora(
-                                  fontSize: 18,
-                                  color: const Color.fromRGBO(216, 79, 59, 1),
-                                ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "Fried Rice",
+                                    style: GoogleFonts.sora(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w700
+                                    ),
+                                  ),
+                                  Text(
+                                    """Fried rice with egg
+and vegetables.""",
+                                    style: GoogleFonts.sora(
+                                      fontSize: 16,
+                                      color: const Color(0xff858992),
+                                    ),
+                                  ),
+                                ],
                               ),
-                              const SizedBox(width: 120,),
-                              const Icon(CupertinoIcons.heart_fill,
-                                color: Colors.red,)
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment
+                                    .spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: [
+                                  Text(
+                                    "\$3.45",
+                                    style: GoogleFonts.sora(
+                                      fontSize: 18,
+                                      color: const Color.fromRGBO(
+                                          216,
+                                          79,
+                                          59,
+                                          1
+                                      ),
+                                    ),
+                                  ),
+                                  const Icon(CupertinoIcons.heart_fill,
+                                    color: Colors.red,)
+                                ],
+                              )
                             ],
-                          )
-                        ],
-                      ),
-                    ],
-                  ),
-                ],
+                          ),
+                        )
+                      ],
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Image.asset("assets/rollandfon.png", height: size
+                            .height / 7.5,
+                          fit: BoxFit.fill,),
+                        const SizedBox(width: 15,),
+                        SizedBox(
+                          height: size.height / 7,
+                          width: size.width - 210,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "Syake roll",
+                                    style: GoogleFonts.sora(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w700
+                                    ),
+                                  ),
+                                  Text(
+                                    "Classic Syake rolls.",
+                                    style: GoogleFonts.sora(
+                                      fontSize: 16,
+                                      color: const Color(0xff858992),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment
+                                    .spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: [
+                                  Text(
+                                    "\$1.68",
+                                    style: GoogleFonts.sora(
+                                      fontSize: 18,
+                                      color: const Color.fromRGBO(
+                                          216,
+                                          79,
+                                          59,
+                                          1
+                                      ),
+                                    ),
+                                  ),
+                                  const Icon(CupertinoIcons.heart_fill,
+                                    color: Colors.red,)
+                                ],
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                  ],
+                ),
               )
             ),
-            const SizedBox(height: 50,),
             Column(
               children: [
                 Row(
@@ -242,7 +275,6 @@ and vegetables.""",
                 ),
               ],
             ),
-            const SizedBox(height: 65,),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [

@@ -9,7 +9,7 @@ class TermsOfUse extends StatelessWidget {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(25),
-        child: Column(
+        child: ListView(
           children: [
             SafeArea(
               child: Center(

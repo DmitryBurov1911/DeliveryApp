@@ -9,10 +9,10 @@ class OneStartPage extends StatelessWidget {
 
     return Center(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const SizedBox(height: 170,),
             const Image(image: AssetImage("assets/startpage0.png"),),
-            const SizedBox(height: 40,),
             Padding(
               padding: const EdgeInsets.only(right: 35, left: 35),
               child: Column(
@@ -25,7 +25,6 @@ class OneStartPage extends StatelessWidget {
                         fontSize: 20
                     ),
                   ),
-                  const SizedBox(height: 10,),
                   Text(
                     """True professionals of their craft will do
 everything they can to keep you satisfied""",
@@ -36,7 +35,6 @@ everything they can to keep you satisfied""",
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  const SizedBox(height: 15,),
                   TextButton(
                       onPressed: () => {controller.nextPage(
                           duration: const Duration(milliseconds: 500),
